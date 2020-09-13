@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane onDragDetected="#dataUpdate" prefHeight="576.0" prefWidth="751.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AddPlayerController">
+   <children>
+      <Label layoutX="38.0" layoutY="60.0" prefHeight="17.0" prefWidth="75.0" text="First Name" />
+      <Label layoutX="370.0" layoutY="60.0" prefHeight="17.0" prefWidth="75.0" text="Last Name" />
+      <TextField id="_tfFirstName" fx:id="_tfFirstName" layoutX="176.0" layoutY="55.0" />
+      <TextField id="_tfLastName" fx:id="_tfLastName" layoutX="482.0" layoutY="55.0" />
+      <Label layoutX="38.0" layoutY="104.0" prefHeight="17.0" prefWidth="75.0" text="Address" />
+      <TextField id="_tfAddress" fx:id="_tfAddress" layoutX="176.0" layoutY="99.0" prefHeight="27.0" prefWidth="473.0" />
+      <Label layoutX="38.0" layoutY="145.0" prefHeight="17.0" prefWidth="75.0" text="Post Code" />
+      <TextField id="_tfPostCode" fx:id="_tfPostCode" layoutX="176.0" layoutY="140.0" />
+      <Label layoutX="370.0" layoutY="145.0" prefHeight="17.0" prefWidth="75.0" text="Province" />
+      <TextField id="_tfProvince" fx:id="_tfProvince" layoutX="482.0" layoutY="140.0" />
+      <Label layoutX="38.0" layoutY="186.0" prefHeight="17.0" prefWidth="126.0" text="Telephone Number" />
+      <TextField id="_tfTeleNum" fx:id="_tfTeleNum" layoutX="176.0" layoutY="181.0" />
+      <Button id="_btSubmit" fx:id="_btnSubmitPlayer" layoutX="182.0" layoutY="525.0" mnemonicParsing="false" onAction="#dataEntry" text="Create Player" />
+      <Label layoutX="14.0" layoutY="14.0" prefHeight="35.0" prefWidth="335.0" text="Create new Or Update player">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <TableView fx:id="_gameShowTableView" layoutX="180.0" layoutY="302.0" prefHeight="200.0" prefWidth="335.0">
+        <columns>
+            <TableColumn fx:id="_colChGame" prefWidth="73.0" text="Select" />
+          <TableColumn fx:id="_colShowGameId" prefWidth="102.0" text="Game ID" />
+            <TableColumn fx:id="_colShowGameName" prefWidth="158.0" text="Game Name" />
+        </columns>
+      </TableView>
+      <Button fx:id="_btnToHome" layoutX="489.0" layoutY="521.0" mnemonicParsing="false" onAction="#goToHome" prefHeight="35.0" prefWidth="207.0" text="Go back to database page" textAlignment="CENTER" wrapText="true" />
+      <Button fx:id="_btnShowGame" layoutX="555.0" layoutY="361.0" mnemonicParsing="false" onAction="#playerPageOnLoad" prefWidth="166.0" text="Display Game for Select" />
+      <Label layoutX="38.0" layoutY="227.0" prefHeight="17.0" prefWidth="126.0" text="Game ID" />
+      <TextField id="_tfTeleNum" fx:id="_tfGameID" layoutX="180.0" layoutY="222.0" promptText="1000" />
+      <Label layoutX="371.0" layoutY="225.0" prefHeight="21.0" prefWidth="94.0" text="Playing Date" />
+      <TextField id="_tfProvince" fx:id="_tfPlayingDate" layoutX="482.0" layoutY="222.0" promptText="DD-MON-YY" />
+      <Label layoutX="38.0" layoutY="266.0" prefHeight="17.0" prefWidth="126.0" text="Game Title" />
+      <TextField id="_tfTeleNum" fx:id="_tfGameTitle" layoutX="180.0" layoutY="261.0" />
+      <Label layoutX="371.0" layoutY="264.0" prefHeight="21.0" prefWidth="112.0" text="Player game ID" />
+      <Label layoutX="370.0" layoutY="186.0" prefHeight="17.0" prefWidth="75.0" text="Score" />
+      <TextField id="_tfProvince" fx:id="_tfPlayerScore" layoutX="482.0" layoutY="181.0" />
+      <Button id="_btSubmit" fx:id="_btnUpdatePlayer" layoutX="343.0" layoutY="525.0" mnemonicParsing="false" onAction="#dataUpdate" text="Update Player" />
+      <Button id="_btSubmit" fx:id="_btnRetrievePlayer" layoutX="31.0" layoutY="413.0" mnemonicParsing="false" onAction="#retrieveData" text="Retrieve Player" />
+      <Label layoutX="38.0" layoutY="344.0" prefHeight="17.0" prefWidth="75.0" text="PlayerID" />
+      <TextField id="_tfFirstName" fx:id="_tfPlayerID" layoutX="30.0" layoutY="375.0" prefHeight="27.0" prefWidth="111.0" />
+      <TextField id="_tfProvince" fx:id="_tfPlayerGameID" layoutX="482.0" layoutY="261.0" />
+   </children>
+</AnchorPane>
